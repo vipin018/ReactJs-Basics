@@ -2,16 +2,17 @@ import React, { useState } from 'react'
 
 const App = () => {
 
-
-  const [a, setA] = useState(10)
-  const change = () => {
-    setA (20);
-  }
+  const [num, setNum] = useState(0)
 
   return (
     <div>
-      <h1>a = {a}</h1>
-      <button onClick={change}>change</button>
+      <h3>Number is {num} </h3>
+      <button onClick={function () {
+        setNum(num + 1);
+      }} >Increase</button>
+      <button onClick={function () {
+        setNum(num - 1);
+      }} >Decrease</button>
     </div>
   )
 }
